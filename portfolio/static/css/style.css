@@ -1,0 +1,135 @@
+*{
+    transition: all 0.4s;
+}
+a{
+    text-decoration: none;
+}
+.red{
+    color: red !important;
+}
+
+/* Above First Section */
+.aboveFirst{
+    background-color: #213363;
+    padding: 8px 0;
+}
+
+/* First Section Starts */
+.my-nav{
+    background-color: #001C30 !important;
+}
+ul .nav-item a{
+    color: white !important;
+}
+.up-link{
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #001C30;
+}
+.up-link a{
+    color: darkblue;
+}
+.up-link:hover{
+    border: 2px solid red;
+}
+.up-link:hover a{
+    color: red;
+}
+.email a:hover{
+    color: red !important;
+}
+
+/* Navbar Section Starts */
+.nav-item .nav-link:hover{
+    color: red !important;
+    font-weight: bold;
+    border-bottom: 2px solid red;
+}
+
+/* First Section Starts */
+.first{
+    background-color: #001C30;
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+.my-name{
+    padding-top: 100px;
+}
+.rounded-pill{
+    background-color: #213363;
+    padding: 8px 18px;
+    font-size: 16px;
+}
+.rounded-pill:hover{
+    background-color: red;
+}
+.my-arrow:hover i{
+    translate: 8px 0px;
+}
+
+/* About Section Starts */
+.about, .education, .skills, .projects, .contact{
+    background-color: #001C30;
+}
+.myIntro{
+    text-align: justify;
+    padding-right: 15px;
+}
+
+/* Education Section Starts */
+.college:hover{
+    box-shadow: 5px 5px 15px red;
+}
+
+/* Skills Section Starts */
+.label{
+    background-color: darkgray;
+    padding: 3px;
+}
+.html:hover{
+    width: 87% !important;
+}
+.css:hover{
+    width: 77% !important;
+}
+.javascript:hover{
+    width: 67% !important;
+}
+.python:hover{
+    width: 82% !important;
+}
+.django:hover{
+    width: 67% !important;
+}
+.mysql:hover{
+    width: 62% !important;
+}
+.bootstrap:hover{
+    width: 77% !important;
+}
+
+/* Project Section Starts */
+.card:hover{
+    box-shadow: 5px 5px 10px gainsboro, -5px -5px 10px gainsboro, 5px -5px 10px gainsboro, -5px 5px 10px gainsboro;
+}
+
+/* Contact Section Starts */
+.contact-img{
+    height: 450px;
+}
+.contact-img img{
+    height: 100%;
+}
+.input-group{
+    box-shadow: 3px 3px 8px gainsboro, -3px -3px 8px gainsboro;
+    border-radius: 8px;
+}
+
+/* Footer Section */
+.footer-links a{
+    text-decoration: none;
+    color: white;
+}
+.footer-links a:hover{
+    color: red;
+}
