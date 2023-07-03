@@ -23,9 +23,6 @@ class Viewed(models.Model):
     device_type = models.CharField(max_length=250)
     os = models.CharField(max_length=50)
     browser = models.CharField(max_length=50)
-    ip = models.CharField(max_length=50)
-    location = models.CharField(max_length=500)
-    latitude = models.CharField(max_length=50)
-    longitude = models.CharField(max_length=50)
+    
     def __str__(self):
-        return f"{self.ip} / {self.device_type} / {self.browser} / {self.os}"
+        return f"{self.device_type} / {self.browser} / {self.os} / {self.time}"
