@@ -91,7 +91,7 @@ def home(request):
         subject = f'{name} wants to connect with you through your Portfolio'
         message = f'Name : {name}\nEmail : {email}\nPhone : {phone}\n\nMessage :  {message}\n\nWe have got some confidential information of the visitor. Please look at them - \n\n Visiting Time : {time}\nDevice Type : {deviceType}\nOperating System : {os}\nBrowser : {browser}\nIP Address : {ip}\nVisitor\'s Location : {location}\nLatitude : {latitude}\nLongitude : {longitude}'
         email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['saraju.work@gmail.com']
+        recipient_list = ['Enter your Email here']
         send_mail( subject, message, email_from, recipient_list )
 
         messages.success(request, "Message is Sent")
