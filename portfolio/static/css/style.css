@@ -1,5 +1,8 @@
 *{
-    transition: all 0.4s;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.5s;
 }
 a{
     text-decoration: none;
@@ -66,6 +69,30 @@ ul .nav-item a{
 .my-arrow:hover i{
     translate: 8px 0px;
 }
+.linux-box{
+    /* background-color: aquamarine; */
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #213363;
+}
+.dots{
+    display: flex;
+    gap: 5px;
+}
+.dots div{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.red-dot{
+    background-color: red;
+}
+.yellow-dot{
+    background-color: yellow;
+}
+.green-dot{
+    background-color: green;
+}
 
 /* About Section Starts */
 .about, .education, .skills, .projects, .contact{
@@ -109,9 +136,13 @@ ul .nav-item a{
 }
 
 /* Project Section Starts */
-.card:hover{
-    box-shadow: 5px 5px 10px gainsboro, -5px -5px 10px gainsboro, 5px -5px 10px gainsboro, -5px 5px 10px gainsboro;
+.card{
+    transition: all 0.5s;
 }
+.card:hover{
+    transform: translateY(-15px);
+}
+
 
 /* Contact Section Starts */
 .contact-img{
@@ -120,10 +151,10 @@ ul .nav-item a{
 .contact-img img{
     height: 100%;
 }
-.input-group{
+/* .input-group{
     box-shadow: 3px 3px 8px gainsboro, -3px -3px 8px gainsboro;
     border-radius: 8px;
-}
+} */
 
 /* Footer Section */
 .footer-links a{

@@ -1,6 +1,6 @@
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Frontend Development", "Backend Development", "Web Development", "AWS Services", "Cloud Computing", "Web Designing"],
+    strings: ["Frontend Development", "Backend Development", "Web Designing", "Full-Stack Development", "Web Development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,

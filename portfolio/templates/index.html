@@ -19,7 +19,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body oncontextmenu="return false">
+<body>
     <!-- Above First Section Starts -->
     <div class="aboveFirst">
         <div class="container">
@@ -85,11 +85,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 my-name text-white">
-                    <h2 class="fw-bold">Hello, I'm Sarajuddin</h2>
-                    <p class="h4 fw-bold">I Am Into <span class="typing-text red fw-bold"></span></p>
-                    <a href="#about" class="badge rounded-pill my-4 my-arrow">
-                        About Me <i class="fa-solid fa-arrow-down"></i>
-                    </a>
+                    <div class="linux-box">
+                        <div class="dots">
+                            <div class="red-dot"></div>
+                            <div class="yellow-dot"></div>
+                            <div class="green-dot"></div>
+                        </div>
+                        <div class="mt-4">
+                            <h2 class="fw-bold">Hello, I'm Sarajuddin</h2>
+                            <p class="h4 fw-bold">I Am Into <span class="typing-text red fw-bold"></span></p>
+                            <a href="#about" class="badge rounded-pill my-4 my-arrow">
+                                About Me <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                            <!-- <a href="#" class="badge rounded-pill my-4 my-arrow">
+                                Other Layouts <i class="fa-solid fa-location-arrow"></i>
+                            </a> -->
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <img src="/static/images/unnamed.gif" alt="" width="100%" loading="lazy" draggable="false">
@@ -116,7 +128,7 @@
                     </div>
                     <div class="my-4">
                         <p class="myIntro">
-                            I am a Full-Stack developer based in Uttar Pradesh, India. I have done my graduation in <span class="red fw-bold">Computer Scince and Engineering</span> from KSVCEM, Bijnor which is affiliated to Dr. APJ Abdul Kalam Technical University Lucknow, Uttar Pradesh. <br/>
+                            I am a Full-Stack developer based in Uttar Pradesh, India. I have done my graduation in <span class="red fw-bold">Computer Science and Engineering</span> from KSVCEM, Bijnor which is affiliated to Dr. APJ Abdul Kalam Technical University Lucknow, Uttar Pradesh. <br/>
                             I am very passionate about improving my coding skills & developing applications & websites. I build WebApps and Websites using Python, HTML, CSS, Django, Javascript. I am working for myself to improve my skills. Love to build Full-Stack web apps.
                         </p>
                         <p>
@@ -233,9 +245,9 @@
             </div>
 
             <div class="row ">
-                <div class="col-md-4 my-3 ">
+                <div class="col-md-4 my-3 card-parent">
                     <div class="card border-0">
-                        <img src="https://i.pinimg.com/originals/cc/b2/9a/ccb29aadc3680b839bf05da2af2fef75.gif" class="card-img-top" loading="lazy" draggable="false">
+                        <img src="https://i.pinimg.com/originals/cc/b2/9a/ccb29aadc3680b839bf05da2af2fef75.gif" class="card-img-top" loading="lazy" draggable="false" height="230px">
                         <div class="card-body">
                           <h5 class="card-title fw-bold">My Mat Space (Web App)</h5>
                           <p class="card-text">Provides the solution and suggests the <span class="red fw-bold">Yogas</span> to them who have any problem such as Digestion, Depression, etc.</p>
@@ -245,7 +257,7 @@
                 </div>
                 <div class="col-md-4 my-3 ">
                     <div class="card border-0">
-                        <img src="https://i.pinimg.com/originals/7f/eb/22/7feb2293997291d6e170776caf866dd1.gif" class="card-img-top" loading="lazy" draggable="false" >
+                        <img src="https://i.pinimg.com/originals/7f/eb/22/7feb2293997291d6e170776caf866dd1.gif" height="230px" class="card-img-top" loading="lazy" draggable="false" >
                         <div class="card-body">
                           <h5 class="card-title fw-bold">Attendance Management</h5>
                           <p class="card-text">This is a GUI based application. In this app, faculties can store the students record on daily basis.</p>
@@ -255,7 +267,7 @@
                 </div>
                 <div class="col-md-4 my-3 ">
                     <div class="card border-0">
-                        <img src="https://cdn.dribbble.com/users/2049840/screenshots/6615632/lamp-animation.gif" class="card-img-top" loading="lazy" draggable="false">
+                        <img src="https://cdn.dribbble.com/users/2049840/screenshots/6615632/lamp-animation.gif" class="card-img-top" height="230px" loading="lazy" draggable="false">
                         <div class="card-body">
                           <h5 class="card-title fw-bold">Guess the Number</h5>
                           <p class="card-text">It is a console based gaming app. A user can play the game, can check last record, and high score.</p>
@@ -292,6 +304,31 @@
                         {% endfor %}
 
                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Name" name="name" required>
+                        </div>
+                        <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <input type="email" class="form-control" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <input type="tel" class="form-control" placeholder="Phone Numer" name="phone" required>
+                        </div>
+                          
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-message align-self-start"></i>    
+                                </span>
+                            <textarea class="form-control" name="message" placeholder="Write your message here" required></textarea>
+                        </div>
+                     <!--   <div class="input-group mb-3">
                             <div class="input-grout-prepend">
                                 <span class="input-group-text h-100 ">
                                     <i class="fa-solid fa-user"></i>
@@ -322,7 +359,7 @@
                                 </span>
                             </div>
                             <textarea cols="30" rows="5" class="form-control " placeholder="Message" name="message" required></textarea>
-                        </div>
+                        </div> -->
 
                         <!-- Hidden Data -->
                         <div class="d-none">

@@ -1,12 +1,13 @@
+# from urllib.request import urlopen
+# from django.http import HttpRequest
+# from verify_email import verify_email
 from django.shortcuts import render, redirect
 from sarajuapp.models import Connection, Viewed
-# from django.http import HttpRequest
 from django.contrib import messages
 from django.conf import settings
 from django.core.mail import send_mail
 from datetime import datetime
 import json
-# from urllib.request import urlopen
 import requests
 
 # Create your views here.
@@ -75,10 +76,11 @@ def home(request):
             latitude = 'Not Found'
             longitude = 'Not Found'
             # print("Please check your internet connection")
-
+        
         if len(phone) != 10:
             messages.info(request, "Phone number should be 10 Character long.")
             return redirect('/#contact')
+        
         if phone.startswith('6') or phone.startswith('7') or phone.startswith('8') or phone.startswith('9'):
             pass
         else:
@@ -88,17 +90,17 @@ def home(request):
         member = Connection(name=name, email=email, phone=phone, message=message, time=time, device_type=deviceType, os=os,  browser=browser,ip=ip, location=location, latitude=latitude, longitude=longitude)
         member.save()
 
-        subject = f'{name} wants to connect with you through your Portfolio'
+        subject = f'Sarajuddin - {name} wants to connect with you through your Portfolio'
         message = f'Name : {name}\nEmail : {email}\nPhone : {phone}\n\nMessage :  {message}\n\nWe have got some confidential information of the visitor. Please look at them - \n\n Visiting Time : {time}\nDevice Type : {deviceType}\nOperating System : {os}\nBrowser : {browser}\nIP Address : {ip}\nVisitor\'s Location : {location}\nLatitude : {latitude}\nLongitude : {longitude}'
         email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['Enter your Email here']
+        recipient_list = ['saraju.work@gmail.com']
         send_mail( subject, message, email_from, recipient_list )
 
         messages.success(request, "Message is Sent")
         return redirect('/#contact')
     
     time = datetime.ctime(datetime.now())
-    subject = f'Someone viewed your Portfolio'
+    subject = f'Sarajuddin - Someone viewed your Portfolio'
     message = f'We have detected that someone viewed your portfolio. Some information of the user are given below - \n\nTime : {time}\nDevice Type : {deviceType}\nOperating System : {os}\nBrowser : {browser}'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = ['saraju.work@gmail.com']
